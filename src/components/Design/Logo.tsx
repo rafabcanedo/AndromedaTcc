@@ -1,12 +1,17 @@
-// AQui vai ser o logo Canedo.
-
-/* import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import styled from 'styled-components';
 
-import Logo from '../../assets/image/LogoNav.png';
-
-const Text = styled.h1`
-
+const LogoText = styled.h1`
+ font-family: 'Jua', sans-serif;
+ font-size: 2rem;
 `;
-} */
+
+const Logo = () => {
+    return(
+     <LogoText>
+       Canedo.
+     </LogoText>
+    );
+}
+
+export default Logo;

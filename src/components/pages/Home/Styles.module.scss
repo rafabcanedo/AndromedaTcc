@@ -1,0 +1,46 @@
+.container {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding-top: 4em; // isso ferra com o center das palavras
+
+ gap: 10px 20px;
+ //column-gap: 20px;
+
+ h1 {
+     font-family: iceland;
+     font-size: 35px;
+ }
+ h3 {
+     font-family: iceland;
+     font-size: 25px;
+ }
+}
+
+.button {
+ display: inline-block;
+ background-color:#633BBC;
+ color: #000;
+ outline: none;
+ border: none;
+ font-family: 'Sora', sans-serif;
+   
+ font-size: 0.875em;
+ padding: 0.9rem 2.3rem;
+ border-radius: 50px;
+ cursor: pointer;
+   
+ transition: all 0.2s ease;
+   
+  &:hover {
+   transform: scale(1.1);
+   }
+}
+
+/*.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 4em;
+}*/

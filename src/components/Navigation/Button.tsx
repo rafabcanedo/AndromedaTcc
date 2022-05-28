@@ -9,9 +9,10 @@ interface Props {
 const Btn = styled.button`
  display: inline-block;
  background-color: #6D21CE; //#633BBC;
- color: '#000';
+ color: #fff;
  outline: none;
  border: none;
+ font-family: 'Sora', sans-serif;
 
  font-size: 0.875em;
  padding: 0.9rem 2.3rem;
