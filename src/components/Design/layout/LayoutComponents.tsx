@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface IProps {
-    children: string;
-    name: string;
-    email: string;
-    password: string;
+/*type ChildrenProps = {
+  text?: string;
+}*/
+
+interface LayoutProps {
+  text?: string;
 }
 
 const Container = styled.div`
@@ -37,22 +38,22 @@ const WrapLogin = styled.div`
  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
 `;
 
-const LayoutComponents: React.FC<IProps> = ({
-    children,
-    name,
-    email,
-    password
-  }) => (
+function LayoutComponents(props: LayoutProps) {
+  return (
     <Container>
      <ContainerLogin>
       <WrapLogin>
-       {children}
-       {name}
-       {email}
-       {password}
+      {props.text}
       </WrapLogin>   
      </ContainerLogin>
     </Container>
- );
+    );
+}
 
 export default LayoutComponents;
+
+/*
+const LayoutComponents: React.FC<IProps> = ({
+    children
+  }) => (
+*/
