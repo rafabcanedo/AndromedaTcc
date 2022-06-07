@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 
 function Home() {
  return(
+    <>
     <div className={styles.container}>
     <div className={styles.content}>
      <h1>Bem Vindo ao Andrômeda 🚀, <br />
@@ -22,6 +23,12 @@ function Home() {
          </Link>
       </div>
     </div>
+       <br />
+       <br />
+    <div className={styles.aplicacoes}>
+    <h1>Aplicações</h1>
+    </div>
+ </>
  );
 }
 

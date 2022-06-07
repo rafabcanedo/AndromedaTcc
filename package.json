@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@fontsource/iceland": "^4.5.9",
+    "@fontsource/jost": "^4.5.10",
     "@fontsource/jua": "^4.5.9",
     "@fontsource/sora": "^4.5.8",
     "@types/js-cookie": "^3.0.2",

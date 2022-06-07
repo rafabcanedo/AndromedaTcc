@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import "@fontsource/sora";
 import "@fontsource/iceland";
 import "@fontsource/jua";
+import "@fontsource/jost"
 
 const GlobalStyles = createGlobalStyle`
 
