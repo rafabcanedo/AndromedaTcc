@@ -81,9 +81,11 @@ function Sobre() {
     <div className={styles.title}>
       <h1>Desenvolvedores</h1>
     </div>
+
+   <div className={styles.desenvolvedores}>
     <div className={styles.terceiroContainer}>
       <img src={Avatar} alt="Avatar Dev" />
-    </div>
+    
     <div className={styles.description}>
     <h3>Rafael Canedo</h3>
     <h4>C.O e Desenvolvedor</h4>
@@ -91,6 +93,21 @@ function Sobre() {
        hoje trabalha como desenvolvedor Web aqui em Andrômeda. <br />
        Seu foco é no Design e no Front End de todo o projeto.
        </p>
+    </div>
+    </div>
+
+    <div className={styles.terceiroContainer}>
+      <img src={Avatar} alt="Avatar Dev" />
+    
+    <div className={styles.description}>
+    <h3>Rafael Canedo</h3>
+    <h4>C.O e Desenvolvedor</h4>
+    <p>Formado em Sistemas de Informação, Rafael Canedo, fundou Andrômeda <br /> 
+       hoje trabalha como desenvolvedor Web aqui em Andrômeda. <br />
+       Seu foco é no Design e no Front End de todo o projeto.
+       </p>
+    </div>
+    </div>
     </div>
     </>
  );

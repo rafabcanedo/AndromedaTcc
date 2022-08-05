@@ -31,7 +31,7 @@ const Button: React.FC<Props> = ({
     link,
   }) => (
   <Btn>
-    <a href={link} arial-label={text} target="_blank" rel="noneferrer">
+    <a href={link} arial-label={text} rel="noneferrer">
       {text}
     </a>
   </Btn>

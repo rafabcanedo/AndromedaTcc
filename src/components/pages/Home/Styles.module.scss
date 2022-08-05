@@ -90,3 +90,35 @@
         text-decoration-color: #00E84C;
     }
 }
+
+.incentivos {
+    position: absolute;
+    width: 1168px;
+    height: 290px;
+    flex-direction: row;
+}
+
+.containerIncentivos {
+    position: absolute;
+    width: 229px;
+    height: 224px;
+    
+    background: #F1F0F0;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.metas {
+ display: block;
+ align-items: center;
+ justify-content: center;
+
+ text {
+ font-size: 18px;
+ font-weight: bold;
+ }
+}
+
+.containerInfo {
+ display: flex;
+ justify-content: space-evenly;
+}
