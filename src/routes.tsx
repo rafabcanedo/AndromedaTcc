@@ -9,7 +9,7 @@ import Home from './components/pages/Home/Home';
 import Applicacoes from './components/pages/Applications/Applications';
 
 import Pomodoro from './components/pages/Pomodoro/Home/Pomodoro';
-import History from './components/pages/Pomodoro/History';
+import History from './components/pages/Pomodoro/History/History';
 import { DefaultLayout } from './components/pages/Pomodoro/DefaultLayout/DefaultLayout';
 
 import ToDo from './components/pages/Todo/ToDo';
