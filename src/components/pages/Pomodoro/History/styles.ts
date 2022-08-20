@@ -24,7 +24,7 @@ export const HistoryList = styled.div`
   min-width: 600px;
 
   th {
-   background-color: #bfc0c0;
+   background-color: #323238;
    padding: 1rem;
    text-align: left;
    color: #E1E1E6;
@@ -43,11 +43,12 @@ export const HistoryList = styled.div`
   }
 
   td {
-    background-color: #E1E1E6;
-    border-top: 4px solid #E1E1E6;
+    background-color: #29292E;
+    border-top: 4px solid #202024;
     padding: 1rem;
     font-size: 0.875rem;
     line-height: 1.6;
+    color: white;
 
    &:first-child {
     width: 50%;
