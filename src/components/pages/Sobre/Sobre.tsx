@@ -5,10 +5,7 @@ import styles from './styles.module.scss';
 import Avatar from '../../../assets/image/avatar.jpg';
 
 // Import Icons
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaTwitch } from "react-icons/fa";
+import { InstagramLogo, LinkedinLogo, TwitterLogo, TwitchLogo } from 'phosphor-react';
 
 function Sobre() {
  return(
@@ -58,22 +55,22 @@ function Sobre() {
       <a href='https://www.instagram.com/canedodev/' target='_blank'
         rel='nooperner'
       >
-       <FaInstagram size={85} />
+       <InstagramLogo size={32} />
       </a>
       <a href='https://www.linkedin.com/in/rafael-canedo-4abaa8197/' target='_blank'
         rel='nooperner'
       >
-      <FaLinkedin size={85} />
+      <LinkedinLogo size={32} />
       </a>
       <a href='https://twitter.com/canedopriv' target='_blank'
         rel='nooperner'
       >
-      <FaTwitter size={85} />
+      <TwitterLogo size={32} />
       </a>
       <a href='https://www.twitch.tv/canedopriv' target='_blank'
         rel='nooperner'
       >
-      <FaTwitch size={85} />
+      <TwitchLogo size={32} />
       </a>
      </div>
     </div>

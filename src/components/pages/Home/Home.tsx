@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Styles.module.scss';
 import Button from '../../Navigation/Button';
 import { Link } from 'react-router-dom';
-import { FaRegEdit, FaRegCalendarCheck, FaRegGrinStars } from "react-icons/fa";
+import { NotePencil, CalendarCheck, Fire } from 'phosphor-react';
 
 // Não está aparecendo na tela Home
 
@@ -23,17 +23,17 @@ function Home() {
          </Link>
       </div>
     </div>
-       <br />
-       <br />
     <div className={styles.aplicacoes}>
     <h1>Aplicações</h1>
 
     <div className={styles.incentivos}>
-      <FaRegEdit size={28} color="red" />
       <div className={styles.containerIncentivos}>
        <div className={styles.metas}>
-       <text>Defina Suas Metas</text>
-       <h4>
+       <NotePencil size={28} color="red" className={styles.icon} />
+       <text className={styles.titleIncentivos}>
+         Defina Suas Metas
+       </text>
+       <h4 className={styles.textIncentivos}>
          Com essas ferramentas <br />
          você alcançará o <br />
          próximo nível
@@ -58,7 +58,7 @@ function Home() {
 export default Home;
 
 /*
-<FaRegEdit size={28} color="red" />
-         <FaRegCalendarCheck size={28} color="red" />
-         <FaRegGrinStars size={28} color="red" />
+<CalendarCheck size={32} />
+<NotePencil size={32} />
+<Fire size={32} />
 */

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
 
-import { FaInstagram, FaTwitch, FaLinkedin, FaGithub } from "react-icons/fa";
+import { InstagramLogo, LinkedinLogo, GithubLogo, TwitchLogo } from 'phosphor-react';
 
 const Section = styled.section`
  margin-top: 4rem;
@@ -118,22 +118,22 @@ const Footer = () => {
         <a href='https://www.instagram.com/canedodev/' target='_blank'
         rel='nooperner'
         >
-        <FaInstagram />
+        <InstagramLogo />
         </a>
         <a href='https://www.twitch.tv/canedopriv' target='_blank'
         rel='nooperner'
         >
-        <FaTwitch />
+        <TwitchLogo />
         </a>
         <a href='https://www.linkedin.com/in/rafael-canedo-4abaa8197/' target='_blank'
         rel='nooperner'
         >
-        <FaLinkedin />
+        <LinkedinLogo />
         </a>
         <a href='https://github.com/rafabcanedo' target='_blank'
         rel='nooperner'
         >
-        <FaGithub />
+        <GithubLogo />
         </a>
         </IconList>
      </Left>
