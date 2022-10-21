@@ -1,25 +1,33 @@
 import React from 'react';
-import styles from './styles.module.scss';
+import "./Applications.css";
 import { Link } from 'react-router-dom';
 
 function Applications() {
  return(
     <>
-    <div className={styles.titleHome}>
+    <div className="applications-title">
     <h1>Applications</h1>
     </div>
-    <div className={styles.buttons}>
+    <div className="buttons-applications">
     <Link to='/pomodoro'>
-    <button> Pomodoro </button>
+    <button className="btn-applications">
+      Pomodoro
+    </button>
     </Link>
     <Link to='/todolist'>
-    <button> ToDo List </button>
+    <button className="btn-applications"> 
+      ToDo List 
+    </button>
     </Link>
     <Link to='/calendario'>
-    <button> Calendar </button>
+    <button className="btn-applications"> 
+      Calendar 
+    </button>
     </Link>
     <Link to='/'>
-    <button> Sei la </button>
+    <button className="btn-applications"> 
+      Sei la
+    </button>
     </Link>
     </div>
     </>

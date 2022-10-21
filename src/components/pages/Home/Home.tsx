@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Styles.module.scss';
+import "./Home.css";
 import Button from '../../Navigation/Button';
 import { Link } from 'react-router-dom';
 import { NotePencil, CalendarCheck, Fire } from 'phosphor-react';
@@ -10,30 +10,30 @@ import { NotePencil, CalendarCheck, Fire } from 'phosphor-react';
 function Home() {
  return(
     <>
-    <div className={styles.container}>
-    <div className={styles.content}>
+    <div className="container-home">
+    <div className="content-home">
      <h1>Bem Vindo ao Andrômeda 🚀, <br />
         Uma plataforma de produtividade 🌒</h1>
      <h3>Onde você cria, desenvolve e organiza <br />
          sua rotina</h3>
       </div>
-      <div className={styles.btn}>
+      <div className="btn-home">
          <Link to='/applications'>
-         <button className={styles.button}>Entre no Foguete</button>
+         <button className="button-home">Entre no Foguete</button>
          </Link>
       </div>
     </div>
-    <div className={styles.aplicacoes}>
+    <div className="aplicacoes-home">
     <h1>Aplicações</h1>
 
-    <div className={styles.incentivos}>
-      <div className={styles.containerIncentivos}>
-       <div className={styles.metas}>
-       <NotePencil size={28} color="red" className={styles.icon} />
-       <text className={styles.titleIncentivos}>
+    <div className="incentivos-home">
+      <div className="container-incentivoshome">
+       <div className="metas-home">
+       <NotePencil size={28} color="red" className="icon-note" />
+       <span className="title-incentivos">
          Defina Suas Metas
-       </text>
-       <h4 className={styles.textIncentivos}>
+       </span>
+       <h4 className="text-icentivos">
          Com essas ferramentas <br />
          você alcançará o <br />
          próximo nível
@@ -43,7 +43,7 @@ function Home() {
     </div>
     </div>
     
-    <div className={styles.containerInfo}>
+    <div className="container-info">
        <Button text="Sobre Nós" link="/sobre" />
 
        <Button text="Comece Agora" link="/applications" />

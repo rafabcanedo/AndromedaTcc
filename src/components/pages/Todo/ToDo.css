@@ -1,0 +1,55 @@
+.app-todolist {
+ padding: 20px 0;
+ width: 85%;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ margin: 0 auto;
+}
+
+.header-tarefa h2 {
+    font-weight: 600;
+    color: #84878A;
+    font-size: 30px;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 30px 0;
+}
+
+.input-tarefa {
+    margin-bottom: 25px;
+    padding-left: 20px;
+
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.input-tarefa::-webkit-input-placeholder  { 
+    font-size: 12px;
+    font-weight: 500;
+    color: #B6B6B7;
+}
+
+.btn-headerlist, .input-tarefa {
+ width: 100%;
+ height: 45px;
+}
+
+.btn-headerlist {
+    background-color: #80CB27;
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media(min-width: 500px) {
+    
+    .App {
+        max-width: 350px;
+    }
+}
