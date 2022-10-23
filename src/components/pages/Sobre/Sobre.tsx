@@ -1,8 +1,9 @@
 import React from 'react';
-import styles from './styles.module.scss';
+import './Sobre.css';
 
 // import Images
 import Avatar from '../../../assets/image/avatar.jpg';
+import Avatar2 from '../../../assets/image/storion.png';
 
 // Import Icons
 import { InstagramLogo, LinkedinLogo, TwitterLogo, TwitchLogo } from 'phosphor-react';
@@ -10,7 +11,7 @@ import { InstagramLogo, LinkedinLogo, TwitterLogo, TwitchLogo } from 'phosphor-r
 function Sobre() {
  return(
     <>
-    <div className={styles.title}>
+    <div className="title-sobre">
      <h1>O que é Andrômeda?</h1>
       <h3>Andrômeda é uma plataforma de produtividade onde você <br />
         desenvolve sua prática de organização. O limite do seu <br />
@@ -18,8 +19,8 @@ function Sobre() {
       </h3>
     </div>
 
-    <div className={styles.container}>
-     <div className={styles.box}>
+    <div className="container-sobre">
+     <div className="box-sobre">
      <h1>
          Quais as vantagens <br />
          de utilizar Andrômeda?
@@ -31,7 +32,7 @@ function Sobre() {
          plataforma.
      </h3>
      </div>
-     <div className={styles.box}>
+     <div className="box-sobre">
      <h1>
          Quais a missão de <br />
          Andrômeda?
@@ -44,65 +45,77 @@ function Sobre() {
      </div>
     </div>
 
-    <div className={styles.title}>
+    <div className="title-sobre">
       <h1>Fale Conosco</h1>
       <h3>Tem interesse em entrar em contato com a gente?<br />
           Siga nossas Redes Sociais abaixo:
       </h3>
     </div>
-    <div className={styles.secondContainer}>
-     <div className={styles.iconList}>
+    <div className="second-csobre">
+     <div className="icon-slist">
+      
+      <div className="cnt-icons">
       <a href='https://www.instagram.com/canedodev/' target='_blank'
         rel='nooperner'
       >
        <InstagramLogo size={32} />
       </a>
+      </div>
+      <div className="cnt-icons">
       <a href='https://www.linkedin.com/in/rafael-canedo-4abaa8197/' target='_blank'
         rel='nooperner'
       >
       <LinkedinLogo size={32} />
       </a>
+      </div>
+      <div className="cnt-icons">
       <a href='https://twitter.com/canedopriv' target='_blank'
         rel='nooperner'
       >
       <TwitterLogo size={32} />
       </a>
+      </div>
+      <div className="cnt-icons">
       <a href='https://www.twitch.tv/canedopriv' target='_blank'
         rel='nooperner'
       >
       <TwitchLogo size={32} />
       </a>
+      </div>
      </div>
     </div>
 
-    <div className={styles.title}>
+    <div className="title-sobre">
       <h1>Desenvolvedores</h1>
     </div>
 
-   <div className={styles.desenvolvedores}>
-    <div className={styles.terceiroContainer}>
+   <div className="info-desenvolvedores">
+    <div className="terceiro-csobre">
+      <div className="cnt-dev">
       <img src={Avatar} alt="Avatar Dev" />
-    
-    <div className={styles.description}>
+      
+    <div className="description-sobre">
     <h3>Rafael Canedo</h3>
     <h4>C.O e Desenvolvedor</h4>
-    <p>Formado em Sistemas de Informação, Rafael Canedo, fundou Andrômeda <br /> 
+    <span>Formado em Sistemas de Informação, Rafael Canedo, fundou o projeto <br /> 
        hoje trabalha como desenvolvedor Web aqui em Andrômeda. <br />
        Seu foco é no Design e no Front End de todo o projeto.
-       </p>
+       </span>
     </div>
     </div>
-
-    <div className={styles.terceiroContainer}>
-      <img src={Avatar} alt="Avatar Dev" />
-    
-    <div className={styles.description}>
-    <h3>Rafael Canedo</h3>
-    <h4>C.O e Desenvolvedor</h4>
-    <p>Formado em Sistemas de Informação, Rafael Canedo, fundou Andrômeda <br /> 
+    </div>
+    <div className="terceiro-csobre">
+      <div className="cnt-dev">
+      <img src={Avatar2} alt="Avatar Dev" />
+      
+    <div className="description-sobre">
+    <h3>Marcelo Storion</h3>
+    <h4>Orientador</h4>
+    <span>Formado em Sistemas de Informação, Rafael Canedo, fundou Andrômeda <br /> 
        hoje trabalha como desenvolvedor Web aqui em Andrômeda. <br />
        Seu foco é no Design e no Front End de todo o projeto.
-       </p>
+       </span>
+    </div>
     </div>
     </div>
     </div>
