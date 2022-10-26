@@ -4,8 +4,9 @@ import Button from '../../Navigation/Button';
 import { Link } from 'react-router-dom';
 import { NotePencil, CalendarCheck, Fire } from 'phosphor-react';
 
-// Não está aparecendo na tela Home
-
+import img1 from '../../../assets/image/pomodoro.png';
+import img2 from '../../../assets/image/todolist.png';
+import img3 from '../../../assets/image/calendario.png';
 
 function Home() {
  return(
@@ -23,34 +24,70 @@ function Home() {
          </Link>
       </div>
     </div>
+    
     <div className="aplicacoes-home">
     <h1>Aplicações</h1>
+    </div>
+
+    <div className="ctn-apps">
+    <div className="ctn-photo-apps">
+     <img src={img1} alt="pomodoro" />
+    </div>
+    <div className="ctn-photo-apps">
+     <img src={img2} alt="lista de tarefas" />
+    </div>
+    <div className="ctn-photo-apps">
+     <img src={img3} alt="calendario" />
+    </div>
+    </div>
+
 
     <div className="incentivos-home">
-      <div className="container-incentivoshome">
-       <div className="metas-home">
-       <NotePencil size={28} color="red" className="icon-note" />
-       <span className="title-incentivos">
-         Defina Suas Metas
-       </span>
-       <h4 className="text-icentivos">
-         Com essas ferramentas <br />
-         você alcançará o <br />
-         próximo nível
-       </h4>
-       </div>
-      </div>
-    </div>
-    </div>
-    
-    <div className="container-info">
+
+     <div className="cnt-home">
+      <NotePencil size={28} color="purple" className="icon-note" />
+      <h4 className="title-incentivos">
+       Defina Suas Metas
+      </h4>
+      <span className="text-icentivos">
+        Com essas ferramentas <br />
+        você alcançará o <br />
+        próximo nível
+      </span>
+     </div>
+
+     <div className="cnt-home">
+      <CalendarCheck size={28} color="purple" className="icon-note" />
+      <h4>
+       Conclua suas Metas
+      </h4>
+      <span>
+       Organização é a <br />
+       virada de chave para <br />
+       o sucesso
+      </span>
+     </div>
+
+     <div className="cnt-home">
+      <Fire size={28} color="purple" className="icon-note" />
+      <h4>
+       Dobre suas Metas
+      </h4>
+      <span>
+       O segredo é nunca estar <br />
+       parado, então dobre <br />
+       suas metas
+      </span>
+     </div>
+     </div>
+
+     <div className="container-info">
        <Button text="Sobre Nós" link="/sobre" />
 
        <Button text="Comece Agora" link="/applications" />
 
        <Button text="Tire sua Dúvida" link="sobre" />
     </div>
-    
  </>
  );
 }
@@ -61,4 +98,12 @@ export default Home;
 <CalendarCheck size={32} />
 <NotePencil size={32} />
 <Fire size={32} />
+
+  <div className="container-info">
+       <Button text="Sobre Nós" link="/sobre" />
+
+       <Button text="Comece Agora" link="/applications" />
+
+       <Button text="Tire sua Dúvida" link="sobre" />
+    </div>
 */

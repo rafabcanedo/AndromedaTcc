@@ -86,43 +86,42 @@
 .aplicacoes-home h1 {
  text-decoration: underline;
  text-decoration-color: #00E84C;
+ padding-top: 60px;
+}
+
+.ctn-apps {
+ display: flex;
+ justify-content: space-evenly;
+ padding-top: 40px;
+}
+
+.ctn-photo-apps {
+ width: 50px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
 }
 
 .incentivos-home {
- position: absolute;
- width: 1168px;
- height: 290px;
- flex-direction: row;
-}
-
-.container-incentivoshome {
-    position: absolute;
-    width: 229px;
-    height: 224px;
-    
-    background: #F1F0F0;
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-}
-
-.metas-home {
-    display: block;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding-top: 200px;
 }
 
-.icon-note {
-
-}
-
-.title-incentivos {
-
-}
-
-.text-icentivos {
-
+.cnt-home {
+ background-color: #ecf0f3;
+ height: 200px;
+ width: 300px;
+ text-align: center;
+ padding-top: 20px;
 }
 
 .container-info {
  display: flex;
  justify-content: space-evenly;
+ padding-top: 200px;
 }

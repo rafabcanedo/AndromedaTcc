@@ -1,4 +1,5 @@
 import React from 'react';
+import './Calendar.css';
 import '@fullcalendar/react/dist/vdom'; // solução para errro de import plugins
 import FullCalendar, {EventContentArg, EventClickArg, DateSelectArg, EventApi} from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -10,18 +11,7 @@ let id=0;
 
 function Calendar() {
   const [events, setEvents] = React.useState<Array<EventApi>>([])
-  const [initialEvents, setInitialEvents] = React.useState([
-        {
-            id: String(10001),
-            title: "Merhaba Dünya",
-            start: new Date().toISOString().split("T")[0]
-        },
-        {
-            id: String(20002),
-            title: "Merhaba Dünya 2",
-            start: new Date().toISOString().split("T")[0] + "T14:05:00"
-        }
-    ])
+  const [initialEvents, setInitialEvents] = React.useState([])
 
   React.useEffect(() => {
     console.log("eventler", events)
@@ -35,7 +25,7 @@ function Calendar() {
     return(
      <>
       <b>{eventContent.timeText}</b>
-      <b style={{color:"red"}}>{eventContent.event.title}</b>
+      <b style={{color:"white"}}>{eventContent.event.title}</b>
      </>
     )
   }
@@ -46,7 +36,7 @@ function Calendar() {
     clickInfo.event.remove()
   }
   const handleDateSelect = (selectInfo: DateSelectArg) => {
-    let title = prompt("Event Adı Giriniz");
+    let title = prompt("Digite aqui seu Evento");
     let calenderApi = selectInfo.view.calendar
     calenderApi.unselect()
     if(title){
@@ -63,14 +53,6 @@ function Calendar() {
   <>
    <FullCalendar
     plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-    customButtons={{
-     btn: {
-      text:"Button Text1",
-      click(ev: MouseEvent, element: HTMLElement) {
-        alert("TESTE NÃO SEI PRA QUE")
-      }
-     }
-    }}
     dateClick={(e : DateClickArg )=>{
      console.log("dateclick",e)
     }}
@@ -92,8 +74,8 @@ function Calendar() {
     eventDragStop={(e)=>{
         console.log("bbbbbb")
     }}
-    eventBackgroundColor={"blue"}
-    eventBorderColor={"purple"}
+    eventBackgroundColor={"#1877F2"}
+    eventBorderColor={""}
     eventRemove={(e)=>{
       console.log("event silindi")
     }}
@@ -117,8 +99,8 @@ function Calendar() {
     buttonText={{
      day:"Dia",
      prev:"Anterior",
-     nextYear:"Sonraki Yil",
-     prevYear:"Onceki Yil",
+     nextYear:"Ano Seguinte",
+     prevYear:"Ano Anterior",
      next:"Proximo",
      month:"Mensal",
      itoday:"Bugune Gel",

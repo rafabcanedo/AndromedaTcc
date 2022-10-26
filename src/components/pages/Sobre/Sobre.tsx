@@ -97,10 +97,11 @@ function Sobre() {
     <div className="description-sobre">
     <h3>Rafael Canedo</h3>
     <h4>C.O e Desenvolvedor</h4>
-    <span>Formado em Sistemas de Informação, Rafael Canedo, fundou o projeto <br /> 
+    <span>
+       Formado em Sistemas de Informação, Rafael Canedo, fundou o projeto <br /> 
        hoje trabalha como desenvolvedor Web aqui em Andrômeda. <br />
        Seu foco é no Design e no Front End de todo o projeto.
-       </span>
+    </span>
     </div>
     </div>
     </div>
@@ -111,10 +112,11 @@ function Sobre() {
     <div className="description-sobre">
     <h3>Marcelo Storion</h3>
     <h4>Orientador</h4>
-    <span>Formado em Sistemas de Informação, Rafael Canedo, fundou Andrômeda <br /> 
-       hoje trabalha como desenvolvedor Web aqui em Andrômeda. <br />
-       Seu foco é no Design e no Front End de todo o projeto.
-       </span>
+    <span>
+       Formado em Ciência da Computação, Marcelo Storion, hoje trabalha
+       gerenciando todo o projeto aqui em Andrômeda. <br />
+       Seu foco é no verificar todos os análises de futuras atualizações.
+    </span>
     </div>
     </div>
     </div>

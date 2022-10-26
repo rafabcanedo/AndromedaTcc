@@ -7,10 +7,7 @@ import { AddArea } from './AddArea';
 
 function ToDo() {
   
-  const [ list, setList ] = useState<Item[]>([
-    { id: 1, name: 'Ir no mercado', done: false },
-    { id: 2, name: 'Fazer um macarrao', done: false},
-  ]);
+  const [ list, setList ] = useState<Item[]>([]);
 
   const handleAddTask = (taskName: string) => {
    let newList = [...list];

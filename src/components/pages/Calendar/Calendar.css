@@ -1,0 +1,7 @@
+.fc .fc-button-primary {
+ background-color: #1877F2;
+}
+
+.fc .fc-button-primary:disabled {
+    background-color: #1877F2;
+}
