@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Menu from './components/Navigation/Menu';
 import Footer from './components/Design/Footer';
 
+import { RequireAuth } from './contexts/Auth/RequireAuth';
+
 // Import Screens
 import Home from './components/pages/Home/Home';
 import Applicacoes from './components/pages/Applications/Applications';
@@ -29,13 +31,14 @@ export default function AppRouter() {
       <Route path='/applications' element={<Applicacoes />} />
       <Route path='/sobre' element={<Sobre />} />
 
-      <Route path="/pomodoro" element={<DefaultLayout />}>
-      <Route path='/pomodoro' element={<Pomodoro />} />
-      <Route path='/pomodoro/history' element={<History />} />
+      <Route path="/pomodoro" element={<RequireAuth><DefaultLayout /></RequireAuth>}>
+      <Route path='/pomodoro' element={<RequireAuth><Pomodoro /></RequireAuth>} />
+      <Route path='/pomodoro/history' element={<RequireAuth><History /></RequireAuth>} />
       </Route>
       
-      <Route path='/todolist' element={<ToDo />} />
-      <Route path='/calendario' element={<Calendario />} />
+      <Route path='/todolist' element={<RequireAuth><ToDo /></RequireAuth>} />
+      <Route path='/calendario' element={<RequireAuth><Calendario /></RequireAuth>} />
+
       <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Register />} />
       

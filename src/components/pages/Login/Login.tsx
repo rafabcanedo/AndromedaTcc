@@ -1,13 +1,28 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import './Login.css';
 
 import Img from '../../../assets/image/test1.png';
+import { AuthContext } from "../../../contexts/Auth/AuthContext";
 
 const Login = () => {
 
+ const auth = useContext(AuthContext);
+ const navigate = useNavigate();
+
  const [email, setEmail] = useState("");
  const [password, setPassword] = useState("");
+
+ const handleLogin = async () => {
+  if(email && password) {
+    const isLogged = await auth.signin(email, password);
+    if(isLogged) {
+      navigate('/');
+    } else {
+     alert("Não deu certo!");
+    }
+  }
+ }
 
  return(
   <div className="section-login">
@@ -43,7 +58,7 @@ const Login = () => {
     </div>
 
     <div className="btn-login-form">
-     <button className="login-form-btn">
+     <button className="login-form-btn" onClick={handleLogin}>
       Login
      </button>
     </div>
