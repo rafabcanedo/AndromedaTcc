@@ -33,7 +33,7 @@
 }
 
 .container-applications {
-
+ 
 }
 
 .applications-list {
@@ -42,7 +42,6 @@
  -webkit-box-pack: justify;
  justify-content: space-between;
  padding: 45px;
- gap: 50px;
  background: #ecf0f3;
 }
 

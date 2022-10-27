@@ -90,17 +90,35 @@
 }
 
 .ctn-apps {
+ position: relative;
+ width: 1100px;
  display: flex;
  justify-content: space-evenly;
- padding-top: 40px;
-}
-
-.ctn-photo-apps {
- width: 50px;
- display: flex;
- flex-direction: column;
  justify-content: center;
  align-items: center;
+ flex-wrap: wrap;
+ padding: 30px;
+ margin-top: 8%;
+}
+
+.ctn-apps .box-apps-home {
+ width: 308px;
+ position: relative;
+ height: 400px;
+ background: #f0f0f0;
+ margin: 30px 10px;
+ padding: 20px 15px;
+
+ display: flex;
+ flex-direction: column;
+ box-shadow: 0.5px 10px #e6e6e6;
+ transition: 0.3s ease-in-out;
+ margin-top: 5%;
+}
+
+.ctn-apps .box-apps-home .ctn-photo-apps img {
+ max-width: 100%;
+ border-radius: 10px;
 }
 
 .incentivos-home {
@@ -113,11 +131,13 @@
 }
 
 .cnt-home {
- background-color: #ecf0f3;
+ background-color: #fafafa;
  height: 200px;
  width: 300px;
  text-align: center;
  padding-top: 20px;
+ box-shadow:  0px 2px 4px rgb(128,128,128);
+ border-radius: 10px;
 }
 
 .container-info {

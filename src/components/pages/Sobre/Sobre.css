@@ -28,11 +28,13 @@
 }
 
 .box-sobre {
- background-color: #ecf0f3;
+ background-color: #fafafa;
  height: 300px;
  width: 350px;
  text-align: center;
  padding-top: 20px;
+ box-shadow:  0px 2px 4px rgb(128,128,128);
+ border-radius: 10px;
 }
 
 .box-sobre h1 {

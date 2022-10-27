@@ -5,7 +5,7 @@ import Logo from '../../assets/image/test1.png';
 
 const Section = styled.section`
  width: 100vw;
- background: #c4c2c2;
+ background: ${props => props.theme['gray-200']};
 `;
 
 const Navbar = styled.nav`

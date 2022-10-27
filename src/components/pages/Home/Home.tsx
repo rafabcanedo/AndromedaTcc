@@ -27,17 +27,46 @@ function Home() {
     
     <div className="aplicacoes-home">
     <h1>Aplicações</h1>
-    </div>
+    
 
     <div className="ctn-apps">
+    
+    <div className="box-apps-home">
     <div className="ctn-photo-apps">
      <img src={img1} alt="pomodoro" />
     </div>
-    <div className="ctn-photo-apps">
-     <img src={img2} alt="lista de tarefas" />
+    <h2 className="title-img-home">
+     Pomodoro
+    </h2>
+    <p className="p-img-home">
+      Gerencie todo o seu tempo com pomodoro.
+    </p>
     </div>
+
+    <div className="box-apps-home">
     <div className="ctn-photo-apps">
-     <img src={img3} alt="calendario" />
+     <img src={img2} alt="lista de tarefas" width="300px" height="250px" />
+    </div>
+    <h2 className="title-img-home">
+     Lista de Tarefas
+    </h2>
+    <p className="p-img-home">
+      Liste todas suas atividades com Lista de Tarefas.
+    </p>
+    </div>
+    
+    <div className="box-apps-home">
+    <div className="ctn-photo-apps">
+    <img src={img3} alt="calendario" width="300px" height="250px"/>
+    </div>
+    <h2 className="title-img-home">
+     Calendario
+    </h2>
+    <p className="p-img-home">
+     Agende seus compromissos com Calendario.
+    </p>
+    </div>
+
     </div>
     </div>
 

@@ -18,8 +18,9 @@ function Applications() {
 
     <div className="body-applications">
      <header className="header-title">
-       4 Aplicações disponíveis
+       3 Aplicações disponíveis
      </header>
+     </div>
 
      <div className="container-applications">
       
@@ -73,7 +74,7 @@ function Applications() {
       </div>
 
      </div>
-    </div>
+    
     
     <div className="faq-title">
      <h1>F.A.Q</h1>
