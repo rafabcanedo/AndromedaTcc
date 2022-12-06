@@ -1,28 +1,49 @@
-import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import './Login.css';
 
+import { Link, useNavigate } from "react-router-dom";
+
 import Img from '../../../assets/image/test1.png';
-import { AuthContext } from "../../../contexts/Auth/AuthContext";
+import LogoGoogle from '../../../assets/image/googlelogo.png';
+
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth } from "../../../services/firebase";
 
 const Login = () => {
+  const provider = new GoogleAuthProvider();
+  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+  
+  provider.setCustomParameters({
+    'login_hint': 'user@example.com'
+  });
 
- const auth = useContext(AuthContext);
+ function makeLogin(){
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential?.accessToken;
+      // The signed-in user info.
+      const user = result.user;
+      setName(user.displayName || "");
+      // ...
+    }).catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.customData.email;
+      // The AuthCredential type that was used.
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      // ...
+    });
+ }
+
  const navigate = useNavigate();
 
+ const [name, setName] = useState("");
  const [email, setEmail] = useState("");
  const [password, setPassword] = useState("");
-
- const handleLogin = async () => {
-  if(email && password) {
-    const isLogged = await auth.signin(email, password);
-    if(isLogged) {
-      navigate('/');
-    } else {
-     alert("Não deu certo!");
-    }
-  }
- }
 
  return(
   <div className="section-login">
@@ -58,9 +79,16 @@ const Login = () => {
     </div>
 
     <div className="btn-login-form">
-     <button className="login-form-btn" onClick={handleLogin}>
+     <button className="login-form-btn">
       Login
      </button>
+    </div>
+
+    <div className="google-signin">
+    <button onClick={makeLogin}>
+      <img src={LogoGoogle} alt="logo-google" />
+      <span>Login com Google</span>
+    </button>
     </div>
 
     <div className="text-newacc">
