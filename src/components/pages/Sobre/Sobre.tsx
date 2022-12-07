@@ -90,6 +90,7 @@ function Sobre() {
     </div>
 
    <div className="info-desenvolvedores">
+
     <div className="terceiro-csobre">
       <div className="cnt-dev">
       <img src={Avatar} alt="Avatar Dev" />
@@ -120,6 +121,7 @@ function Sobre() {
     </div>
     </div>
     </div>
+    
     </div>
     </>
  );

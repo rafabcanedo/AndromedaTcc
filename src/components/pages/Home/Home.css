@@ -80,7 +80,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.8;
 }
 
 .aplicacoes-home h1 {
@@ -98,7 +97,7 @@
  align-items: center;
  flex-wrap: wrap;
  padding: 30px;
- margin-top: 8%;
+ //margin-top: 8%;
 }
 
 .ctn-apps .box-apps-home {

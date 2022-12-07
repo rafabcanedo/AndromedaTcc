@@ -6,38 +6,18 @@ import { Link, useNavigate } from "react-router-dom";
 import Img from '../../../assets/image/test1.png';
 import LogoGoogle from '../../../assets/image/googlelogo.png';
 
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth } from "../../../services/firebase";
+import { GoogleLogin } from '@react-oauth/google';
+
+<GoogleLogin
+  onSuccess={credentialResponse => {
+    console.log(credentialResponse);
+  }}
+  onError={() => {
+    console.log('Login Failed');
+  }}
+/>;
 
 const Login = () => {
-  const provider = new GoogleAuthProvider();
-  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-  
-  provider.setCustomParameters({
-    'login_hint': 'user@example.com'
-  });
-
- function makeLogin(){
-  signInWithPopup(auth, provider)
-    .then((result) => {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential?.accessToken;
-      // The signed-in user info.
-      const user = result.user;
-      setName(user.displayName || "");
-      // ...
-    }).catch((error) => {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // The email of the user's account used.
-      const email = error.customData.email;
-      // The AuthCredential type that was used.
-      const credential = GoogleAuthProvider.credentialFromError(error);
-      // ...
-    });
- }
 
  const navigate = useNavigate();
 
@@ -85,7 +65,7 @@ const Login = () => {
     </div>
 
     <div className="google-signin">
-    <button onClick={makeLogin}>
+    <button>
       <img src={LogoGoogle} alt="logo-google" />
       <span>Login com Google</span>
     </button>

@@ -74,14 +74,6 @@ function Applications() {
       </div>
 
      </div>
-    
-    
-    <div className="faq-title">
-     <h1>F.A.Q</h1>
-    </div>
-    <div className="section-faq">
-    
-    </div>
     </>
  );
 }
