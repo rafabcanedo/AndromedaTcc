@@ -6,24 +6,26 @@ import { Link } from "react-router-dom";
 import Img from '../../../assets/image/test1.png';
 import LogoGoogle from '../../../assets/image/googlelogo.png';
 
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getRedirectResult, GoogleAuthProvider, signInWithPopup, signInWithRedirect } from "firebase/auth";
+import { auth } from "../../../services/firebaseConfig";
 
-import { auth } from '../../../services/firebase';
-
-const Login = () => {
-  
+function Login() {
   const provider = new GoogleAuthProvider();
   provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
   provider.setCustomParameters({
-    'login_hint': 'user@example.com'
+    login_hint: 'user@example.com'
   });
 
-function makeLogin() {
-signInWithPopup(auth, provider)
+  function signInGoogle(e){
+    e.preventDefault();
+  signInWithRedirect(auth, provider)
+  getRedirectResult(auth)
   .then((result) => {
-    const credential = GoogleAuthProvider.credentialFromResult(result);
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    const credential = GoogleAuthProvider.credentialFromResult(result!);
     const token = credential?.accessToken;
-    const user = result.user;
+    // The signed-in user info.
+    const user = result?.user;
     console.log(user);
     // ...
   }).catch((error) => {
@@ -35,8 +37,10 @@ signInWithPopup(auth, provider)
     // The AuthCredential type that was used.
     const credential = GoogleAuthProvider.credentialFromError(error);
     // ...
+    console.log(errorMessage);
   });
- }
+
+  }
 
  const [name, setName] = useState("");
  const [email, setEmail] = useState("");
@@ -81,7 +85,7 @@ signInWithPopup(auth, provider)
     </div>
 
     <div className="google-signin">
-    <button onClick={makeLogin}>
+    <button onClick={signInGoogle}>
       <img src={LogoGoogle} alt="logo-google" />
       <span>Login com Google</span>
     </button>
