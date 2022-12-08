@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import "./Applications.css";
 import { Link } from 'react-router-dom';
 
-import { ArrowDown } from 'phosphor-react';
-
 function Applications() {
  return(
     <>
@@ -16,7 +14,9 @@ function Applications() {
     </h3>
     </div>
 
-    <div className="body-applications">
+    {/*<div className='pricing container section'>
+    <h1 className='section__title'>3 Aplicaçoes Disponíveis</h1>*/}
+     <div className="body-applications">
      <header className="header-title">
        3 Aplicações disponíveis
      </header>
@@ -39,6 +39,7 @@ function Applications() {
       </button>
       </Link>
       </div>
+ 
 
       <div className="applications-list">
        <h3>
@@ -57,6 +58,7 @@ function Applications() {
        </Link>
       </div>
 
+
       <div className="applications-list">
        <h3>
         Calendário
@@ -72,8 +74,8 @@ function Applications() {
       </button>
       </Link>
       </div>
-
-     </div>
+      </div>
+    
     </>
  );
 }

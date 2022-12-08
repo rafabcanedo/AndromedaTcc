@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDDIIorQ_NyhnHzu9Y53jcxZ5mnwNCSPv8",
-  authDomain: "andromeda-a5f30.firebaseapp.com",
-  projectId: "andromeda-a5f30",
-  storageBucket: "andromeda-a5f30.appspot.com",
-  messagingSenderId: "90061772891",
-  appId: "1:90061772891:web:f647783184800ae36dc77e",
-  measurementId: "G-3W3LSZY97D"
+  apiKey: "AIzaSyCIrlf6vPxvQP6cpg7zcRE4qdY7BkBdu1o",
+  authDomain: "andromeda-a8043.firebaseapp.com",
+  projectId: "andromeda-a8043",
+  storageBucket: "andromeda-a8043.appspot.com",
+  messagingSenderId: "858489805165",
+  appId: "1:858489805165:web:865f6c780be9394f9a6264",
+  measurementId: "G-2TBVM6SF7R"
 };
 
 const app = initializeApp(firebaseConfig);

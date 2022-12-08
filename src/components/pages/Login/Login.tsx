@@ -1,25 +1,42 @@
 import React, { useState } from "react";
 import './Login.css';
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Img from '../../../assets/image/test1.png';
 import LogoGoogle from '../../../assets/image/googlelogo.png';
 
-import { GoogleLogin } from '@react-oauth/google';
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
-<GoogleLogin
-  onSuccess={credentialResponse => {
-    console.log(credentialResponse);
-  }}
-  onError={() => {
-    console.log('Login Failed');
-  }}
-/>;
+import { auth } from '../../../services/firebase';
 
 const Login = () => {
+  
+  const provider = new GoogleAuthProvider();
+  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+  provider.setCustomParameters({
+    'login_hint': 'user@example.com'
+  });
 
- const navigate = useNavigate();
+function makeLogin() {
+signInWithPopup(auth, provider)
+  .then((result) => {
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential?.accessToken;
+    const user = result.user;
+    console.log(user);
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+ }
 
  const [name, setName] = useState("");
  const [email, setEmail] = useState("");
@@ -52,8 +69,7 @@ const Login = () => {
      <input 
       className="input-login" 
       type="password"
-      value={password}
-      onChange={e => setPassword(e.target.value)}
+      autoComplete="on"
      />
      <span className="focus-input" placeholder="Senha"></span>
     </div>
@@ -65,7 +81,7 @@ const Login = () => {
     </div>
 
     <div className="google-signin">
-    <button>
+    <button onClick={makeLogin}>
       <img src={LogoGoogle} alt="logo-google" />
       <span>Login com Google</span>
     </button>
